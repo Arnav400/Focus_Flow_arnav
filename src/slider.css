@@ -1,20 +1,54 @@
-.slider{
-    height: 40px;
-    border: 2px solid var(--red);
-    border-radius: 20px;
+:root {
+    --primary: #00d4ff;  /* Neon Cyan */
+    --secondary: #006400; /* Dark Green */
+    --bright-green: #32CD32; /* Bright Green (Lime Green) */
+    --highlight: #ff006e; /* Neon Pink */
 }
 
-.thumb{
-    background-color: var(--red);
-    cursor:pointer;
-    width:40px;
+.slider {
     height: 40px;
+    border: 2px solid var(--primary); /* Neon Cyan border */
     border-radius: 20px;
+    background: linear-gradient(to right, rgba(0, 212, 255, 0.2), rgba(0, 100, 0, 0.2)); /* Green-Cyan gradient */
+    transition: all 0.3s ease;
 }
 
-.slider.green{
-    border: 2px solid var(--green);
+.slider:hover {
+    /* Remove hover effect for the slider itself */
+    /* No changes on hover for slider background */
 }
-.slider.green .thumb{
-    background-color: var(--green);
+
+.thumb {
+    background-color: var(--primary); /* Neon Cyan thumb */
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.6); /* Soft glow effect */
+    transition: all 0.3s ease;
+}
+
+.thumb:hover {
+    background-color: var(--highlight); /* Neon Pink when hovered */
+    box-shadow: 0 0 15px rgba(255, 0, 110, 0.8); /* More intense glow on hover */
+}
+
+/* Break Slider (Bright Green) */
+.slider.green {
+    border: 2px solid var(--bright-green); /* Bright Green border */
+    background: linear-gradient(to right, rgba(50, 205, 50, 0.2), rgba(0, 212, 255, 0.2)); /* Bright Green-Cyan gradient */
+}
+
+.slider.green:hover {
+    background: linear-gradient(to right, rgba(50, 205, 50, 0.4), rgba(0, 212, 255, 0.4)); /* Darker gradient on hover */
+}
+
+.slider.green .thumb {
+    background-color: var(--bright-green); /* Bright Green thumb */
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.6); /* Soft bright green glow */
+}
+
+.slider.green .thumb:hover {
+    background-color: var(--highlight); /* Neon Pink when hovered */
+    box-shadow: 0 0 15px rgba(255, 0, 110, 0.8); /* More intense glow on hover */
 }

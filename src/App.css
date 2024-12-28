@@ -1,45 +1,66 @@
-:root{
-  --red: #f54e4e;
-  --green: #4aec8c;
+:root {
+  /* Futuristic colors */
+  --primary: #00d4ff;  /* Neon Cyan */
+  --secondary: #9e5fff; /* Electric Purple */
+  --accent: #1f1f2e;    /* Dark Space Blue */
+  --highlight: #ff006e; /* Neon Pink */
 }
 
-body{
-  background-color: #30384b;
-  color: #eee;
+body {
+  background-color: #1a1d2c; /* Deep Dark Blue */
+  color: #e3e3e3; /* Light Gray for text */
 }
-main{
+
+main {
   padding-top: 50px;
   max-width: 340px;
   margin: 0 auto;
   text-align: center;
 }
 
-button{
+button {
   background-color: transparent;
-  color: rgba(255,255,255,0.8);
-  border:0;
+  color: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
   display: inline-block;
   width: 100px;
   cursor: pointer;
+  padding: 12px 18px;
+  transition: all 0.3s ease;
 }
 
-button.with-text{
+button:hover {
+  background-color: var(--primary);
+  color: #000;
+}
+
+button.with-text {
   width: auto;
-  background-color:rgba(255,255,255,0.1);
-  border-radius:10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   padding: 10px 20px;
   font-size: 1.4rem;
   line-height: 36px;
+  transition: all 0.3s ease;
 }
-button.with-text svg{
+
+button.with-text:hover {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+button.with-text svg {
   width: 36px;
-  float:left;
+  float: left;
   margin-right: 5px;
 }
 
-label{
-  display:block;
+label {
+  display: block;
   margin-bottom: 10px;
   margin-top: 20px;
   text-transform: capitalize;
+  font-weight: bold;
+  color: var(--primary);
 }
